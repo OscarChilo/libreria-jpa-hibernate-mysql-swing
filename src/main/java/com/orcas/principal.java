@@ -59,14 +59,14 @@ public class principal extends JFrame {
 		});
 		
 	}
-	private static void begin() {
+	public static void begin() {
 		factory=Persistence.createEntityManagerFactory("LibroUnit");
 		entityManager=factory.createEntityManager();
 		
 		entityManager.getTransaction().begin();
 	}
 	
-	private static void end() {
+	public static void end() {
 		entityManager.getTransaction().commit();
 		entityManager.close();
 		factory.close();
